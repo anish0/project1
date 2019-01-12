@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<button class="button">fadeout</button>
+<button class="button1">fadein</button>
+<button class="button2">fadetoggle</button>
+<button class="button3">toggle</button>
+<button class="button4">remove</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".button").click(function(){
+			$(".box").fadeOut(2000);
+		});
+		$(".button1").click(function(){
+			$(".box").fadeIn(2000);
+		});
+		$(".button2").click(function(){
+			$(".box").fadeToggle(2000);
+		});
+		$(".button3").click(function(){
+			$(".box").toggle(2000);
+		});
+		$(".button4").click(function(){
+			$(".box").remove();
+		});
+
+	});
+</script>
+</body>
+</html>
